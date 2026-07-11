@@ -13,7 +13,7 @@ const Footer = () => {
                             DESIGNED & <span className="text-primary-red">DEVELOPED</span> BY <span className="text-primary-red">TOKIR</span> KHAN
                         </div>
                         <p className="max-w-xs dark:text-gray-500 text-gray-400 font-medium text-sm leading-relaxed">
-                            Built on the pillars of discipline, mathematical logic, and structural consistency. Currently refining foundations in Machine Learning.
+                            Built on the pillars of discipline, clean architectures, and structural consistency. Currently refining foundations in System Design & Distributed Networks.
                         </p>
                     </div>
 

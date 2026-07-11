@@ -9,14 +9,14 @@ const Education = () => {
             institution: 'JECRC University, Jaipur',
             degree: 'Bachelor of Technology (B.Tech)',
             branch: 'Computer Science Engineering',
-            specialization: 'Artificial Intelligence & Machine Learning',
+            specialization: 'Backend Software Engineering & Systems',
             duration: '2024 - Present',
             status: 'Ongoing',
-            highlight: '9.28 CGPA',
+            highlight: '9.37 CGPA',
             details: [
-                'Strong focus on AI/ML architectures and software engineering principles.',
-                'Maintaining academic excellence while actively participating in technical community initiatives.',
-                'Engaged in deep exploration of Data Structures, Algorithms, and Mathematical Modelling.'
+                'Rigorous focus on Object-Oriented Programming (OOP) architectures and database design principles.',
+                'Maintaining academic excellence (9.37 CGPA) while developing production-ready API services.',
+                'Detailed coursework covering Data Structures, Relational Database Management Systems (RDBMS), Operating Systems, and Network Protocols.'
             ],
             icon: <GraduationCap className="w-6 h-6" />,
             color: 'text-primary-red',
@@ -56,23 +56,23 @@ const Education = () => {
                 >
                     <div className="flex items-center gap-4 mb-4">
                         <div className="h-px w-12 bg-primary-red"></div>
-                        <span className="text-sm font-black uppercase tracking-[0.3em] text-primary-red underline-offset-8">Academic Foundation</span>
+                        <span className="text-sm font-black uppercase tracking-[0.3em] text-primary-red">Academic Foundation</span>
                     </div>
                     <h2 className="text-6xl md:text-8xl font-black dark:text-white text-gray-950 uppercase tracking-tighter leading-none">
                         EDUCAT<span className="text-primary-blue">ION</span>
                     </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 text-left">
                     {/* Main highlight - University */}
                     <div className="lg:col-span-12">
                         {educationData.filter(e => e.type === 'university').map((edu, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, scale: 0.95 }}
+                                initial={{ opacity: 0, scale: 0.98 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                className="relative group rounded-[48px] p-[1px] bg-gradient-to-br from-primary-red/50 to-primary-blue/50"
+                                className="relative group rounded-[48px] p-[1px] bg-gradient-to-br from-primary-red/20 to-primary-blue/20"
                             >
                                 <div className="dark:bg-gray-950 bg-white rounded-[47px] p-8 md:p-16 relative overflow-hidden h-full">
                                     {/* Glass reflection */}
@@ -99,7 +99,7 @@ const Education = () => {
                                                 </p>
                                                 <div className="flex items-center gap-6 dark:text-gray-400 text-gray-600 font-bold uppercase tracking-widest text-sm">
                                                     <div className="flex items-center gap-2">
-                                                        <MapPin className="w-4 h-4" /> Jaipur
+                                                        <MapPin className="w-4 h-4" /> Jaipur, India
                                                     </div>
                                                     <div className="flex items-center gap-2">
                                                         <Calendar className="w-4 h-4" /> {edu.duration}
@@ -108,7 +108,7 @@ const Education = () => {
                                             </div>
 
                                             <p className="text-lg font-black dark:text-primary-blue text-primary-red uppercase tracking-widest">
-                                                Specialization: {edu.specialization}
+                                                Focus: {edu.specialization}
                                             </p>
 
                                             <ul className="space-y-4 pt-4 border-t border-gray-200 dark:border-gray-800">
@@ -126,13 +126,13 @@ const Education = () => {
                                             <div className="relative">
                                                 <motion.div
                                                     animate={{ rotate: 360 }}
-                                                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                                                    className="w-80 h-80 rounded-[80px] border-[20px] border-primary-red/5 border-t-primary-red/20 blur-sm flex items-center justify-center"
+                                                    transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                                                    className="w-80 h-80 rounded-[80px] border-[20px] border-primary-red/5 border-t-primary-red/20 blur-xs flex items-center justify-center"
                                                 >
                                                     <GraduationCap className="w-32 h-32 text-gray-100/10 -rotate-[360deg] transition-all" />
                                                 </motion.div>
                                                 <div className="absolute inset-0 flex items-center justify-center">
-                                                    <span className="text-8xl font-black dark:text-white text-gray-950 opacity-5">JECRC</span>
+                                                    <span className="text-8xl font-black dark:text-white text-gray-955 opacity-5">JECRC</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -143,14 +143,14 @@ const Education = () => {
                     </div>
 
                     {/* Secondary Education - Schools */}
-                    <div className="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div className="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
                         {educationData.filter(e => e.type === 'school').map((edu, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: index * 0.2 }}
+                                transition={{ delay: index * 0.1 }}
                                 className="group p-8 rounded-[40px] dark:bg-gray-950/50 bg-white border border-gray-200 dark:border-gray-800 hover:border-primary-blue transition-all duration-500"
                             >
                                 <div className="space-y-6">
@@ -163,7 +163,7 @@ const Education = () => {
 
                                     <div className="space-y-2">
                                         <h4 className="text-sm font-black text-primary-blue uppercase tracking-widest">{edu.level}</h4>
-                                        <h3 className="text-3xl font-black dark:text-white text-gray-950 uppercase tracking-tight line-clamp-2">
+                                        <h3 className="text-3xl font-black dark:text-white text-gray-955 uppercase tracking-tight line-clamp-2">
                                             {edu.institution}
                                         </h3>
                                         <p className="dark:text-gray-400 text-gray-600 font-bold uppercase tracking-tight text-xs">{edu.board}</p>

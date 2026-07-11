@@ -1,37 +1,24 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Certificates from './components/Certificates';
-import Projects from './components/Projects';
-import Journey from './components/Journey';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Resume from './components/Resume';
-import Education from './components/Education';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DynamicBackground from './components/DynamicBackground';
+import MainPortfolio from './pages/MainPortfolio';
+import ProjectSkillGraph from './pages/ProjectSkillGraph';
+import CommandPalette from './components/CommandPalette';
 
 function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden relative transition-colors duration-500">
-      <DynamicBackground />
-      <div className="grid-pattern relative z-10">
-        <Navbar />
-        <Hero />
-        <Resume />
-        <About />
-        <Education />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Certificates />
-        <Journey />
-        <Contact />
-        <Footer />
+    <Router>
+      <div className="min-h-screen overflow-x-hidden relative transition-colors duration-500">
+        <DynamicBackground />
+        <CommandPalette />
+        <div className="grid-pattern relative z-10">
+          <Routes>
+            <Route path="/" element={<MainPortfolio />} />
+            <Route path="/project/skillgraph" element={<ProjectSkillGraph />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
